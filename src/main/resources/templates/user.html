@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!doctype html>
+        <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+        <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>Hello, world!</title>
+</head>
+<body>
+<nav class="navbar bg-dark " data-bs-theme="dark">
+    <div class="container-fluid ">
+        <span style="font-weight:bold" class="text-white bg-dark "
+              th:text="|${user.getUsername()} with roles: ${user.getRole()}|"></span>
+        <button type="button" onclick="window.location.href='/logout';" class="btn btn-link text-white bg-dark">Logout
+        </button>
+    </div>
+</nav>
+<br>
+
+<divrow class="row ">
+    <div class="col-2">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-user-tab" data-bs-toggle="pill" href="#v-pills-user" role="tab"
+               aria-controls="v-pills-user" aria-selected="true">User</a>
+        </div>
+    </div>
+    <div class="col-10" style="background-color: #f5f9fa">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-user" role="tabpanel" aria-labelledby="v-pills-user-tab">
+                <h3>User information-page!</h3>
+                <div class="w-auto p-3 border bg-light clearfix " style="background-color: #f5f9fa">About user</div>
+                <table class="table table-bordered table-striped" style="background-color: white">
+                    <tr>
+                        <th>ID</th>
+                        <th>userName</th>
+                        <th>Age</th>
+                        <th>Roles</th>
+                    </tr>
+                    <tr>
+                        <td><b th:text="${user.getId()}">Id</b></td>
+                        <td th:text="${user.getUsername()}">userName</td>
+                        <td th:text="${user.getAge()}">age</td>
+                        <td th:text="${user.getRole()}">age</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</divrow>
+</div>
+
+<!--</divone>-->
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
